@@ -12,3 +12,12 @@ module "cloudfront" {
   cdn_tags           = { Iac = "true" }
   depends_on         = [module.s3]
 }
+
+module "sqs" {
+  source = "terraform-aws-modules/sqs/aws"
+  name = ""
+  create_dlq = true
+  tags = {
+    Iac = true
+  }
+}
