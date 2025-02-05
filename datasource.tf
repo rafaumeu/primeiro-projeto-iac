@@ -1,3 +1,3 @@
 data "aws_s3_bucket" "bucket" {
-  bucket = "rafael-bucket-iac-${terraform.workspace}"
+  bucket = "${var.org_name}-bucket-iac-${terraform.workspace}"
 }
