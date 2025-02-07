@@ -2,7 +2,7 @@
 
 # 🚀 Terraform AWS Infrastructure
 
-A modern infrastructure as code project for AWS S3 bucket management using Terraform.
+A modern infrastructure as code project for AWS S3 and CloudFront integration using Terraform.
 
 [![Terraform](https://img.shields.io/badge/Terraform-5.85.0-844FBA.svg)](https://www.terraform.io/)
 [![AWS](https://img.shields.io/badge/AWS-Provider-FF9900.svg)](https://aws.amazon.com/)
@@ -35,19 +35,30 @@ A modern infrastructure as code project for AWS S3 bucket management using Terra
 
 - **AWS S3 Configuration**:
   - Automated bucket creation
+  - Static website hosting
+  - Custom error/index documents
   - Resource tagging
   - Environment-based isolation
+
+- **CloudFront Integration**:
+  - CDN distribution setup
+  - HTTPS redirection
+  - Custom origin configuration
+  - Global content delivery
+  - Price class management
 
 - **Infrastructure Management**:
   - Terraform state management
   - AWS provider configuration
   - Data source integration
+  - Module-based architecture
 
 ## 📦 Prerequisites
 
 - Terraform 1.0+
 - AWS CLI configured
 - AWS account with appropriate permissions
+- Basic understanding of S3 and CloudFront concepts
 
 ## 🛠️ Setup
 
@@ -82,14 +93,93 @@ terraform plan
 terraform apply
 ```
 
+## 📝 Contributing
+
+### Commit Convention
+
+We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification. Every commit message must follow this pattern:
+
+```bash
+<type>(<scope>): <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+#### Types
+
+- `feat`: A new feature
+- `fix`: A bug fix
+- `docs`: Documentation only changes
+- `style`: Changes that do not affect the meaning of the code
+- `refactor`: A code change that neither fixes a bug nor adds a feature
+- `perf`: A code change that improves performance
+- `test`: Adding missing tests or correcting existing tests
+- `chore`: Changes to the build process or auxiliary tools
+
+#### Scopes
+
+- `infra`: Changes to infrastructure configuration
+- `s3`: Changes related to S3 module
+- `cdn`: Changes related to CloudFront module
+- `docs`: Changes to documentation
+- `ci`: Changes to CI/CD pipeline
+
+#### Examples
+
+```bash
+# Feature example
+feat(s3): add website hosting configuration
+
+- Add index.html configuration
+- Configure error document
+- Enable static website hosting
+```
+
+```bash
+# Fix example
+fix(cdn): correct origin protocol policy
+
+- Update protocol policy to http-only
+- Fix SSL protocols configuration
+```
+
+```bash
+# Documentation example
+docs(readme): update project documentation
+
+- Add commit convention section
+- Update prerequisites
+- Include contribution guidelines
+```
+
+### Pull Request Process
+
+1. Update the README.md with details of changes if needed
+2. Update the version numbers in files following [SemVer](http://semver.org/)
+3. Create your PR with a clear title and description
+4. Wait for review and approval from maintainers
+
 ## 🏗️ Project Structure
 
 ```
 terraform-aws-infra/
-├── main.tf           # S3 bucket resource configuration
-├── providers.tf      # AWS provider configuration
-├── datasource.tf     # Data source definitions
-└── .gitignore       # Git ignore rules
+├── main.tf                    # Main configuration file
+├── providers.tf               # AWS provider configuration
+├── output.tf                  # Output definitions
+├── modules/
+│   ├── s3/                   # S3 bucket module
+│   │   ├── main.tf          # S3 bucket configuration
+│   │   ├── variables.tf     # Module variables
+│   │   ├── outputs.tf       # Module outputs
+│   │   └── datasources.tf   # S3 data sources
+│   └── cloudfront/          # CloudFront module
+│       ├── main.tf          # CloudFront configuration
+│       ├── variables.tf     # Module variables
+│       ├── outputs.tf       # Module outputs
+│       └── datasources.tf   # CloudFront data sources
+└── .gitignore               # Git ignore rules
 ```
 
 ## 🔧 Environment Variables
@@ -100,6 +190,14 @@ AWS_ACCESS_KEY_ID="your-access-key"
 AWS_SECRET_ACCESS_KEY="your-secret-key"
 AWS_REGION="your-region"
 ```
+
+## 📤 Outputs
+
+After applying the infrastructure, you'll get:
+
+- S3 bucket domain name
+- CloudFront distribution domain name
+- CloudFront distribution ID
 
 ---
 
