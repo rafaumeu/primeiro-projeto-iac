@@ -10,7 +10,9 @@ terraform {
     region  = "us-east-2"
     key     = "terraform.tfstate"
     encrypt = true
+
   }
+
 }
 
 provider "aws" {}
@@ -20,4 +22,12 @@ resource "aws_s3_bucket" "terraform_state" {
   lifecycle {
     prevent_destroy = true
   }
+}
+
+resource "aws_s3_bucket_versioning" "terraform_state" {
+  bucket = aws_s3_bucket.terraform_state.bucket
+  versioning_configuration {
+    status = "Enabled"
+  }
+  depends_on = [aws_s3_bucket.terraform_state]
 }
