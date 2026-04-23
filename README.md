@@ -65,8 +65,8 @@ A modern infrastructure as code project for AWS S3 and CloudFront integration us
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/terraform-aws-infra.git
-cd terraform-aws-infra
+git clone https://github.com/rafaumeu/primeiro-projeto-iac.git
+cd primeiro-projeto-iac
 ```
 
 2. Initialize Terraform:
