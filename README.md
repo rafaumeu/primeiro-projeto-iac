@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform) ![AWS S3](https://img.shields.io/badge/AWS_S3-FF9900?style=for-the-badge&logo=amazonaws) ![DevOps](https://img.shields.io/badge/DevOps-FFCA28?style=for-the-badge)
+  <img alt="Terraform" src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform"/> <img alt="AWS S3" src="https://img.shields.io/badge/AWS_S3-FF9900?style=for-the-badge&logo=amazonaws"/> <img alt="DevOps" src="https://img.shields.io/badge/DevOps-FFCA28?style=for-the-badge"/>
 </p>
 
 ## Overview
