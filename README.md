@@ -1,9 +1,9 @@
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=180&section=header&text=Primeiro%20Projeto%20IaC&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=AWS%20S3%20Infrastructure%20with%20Terraform&descSize=18&descAlignY=52"/>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FFCA28&height=180&section=header&text=Primeiro%20Projeto%20IaC&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=AWS%20S3%20Infrastructure%20with%20Terraform&descSize=18&descAlignY=52"/>
 </div>
 
 <p align="center">
-  ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform) ![AWS S3](https://img.shields.io/badge/AWS_S3-FF9900?style=for-the-badge&logo=amazonaws) ![DevOps](https://img.shields.io/badge/DevOps-FF0080?style=for-the-badge)
+  ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform) ![AWS S3](https://img.shields.io/badge/AWS_S3-FF9900?style=for-the-badge&logo=amazonaws) ![DevOps](https://img.shields.io/badge/DevOps-FFCA28?style=for-the-badge)
 </p>
 
 ## Overview
@@ -48,6 +48,6 @@ terraform apply
 MIT
 
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=100&section=footer"/>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FFCA28&height=100&section=footer"/>
   <br/><sub>Built with ❤️ by <a href="https://github.com/rafaumeu">Rafael Zendron</a></sub>
 </div>
